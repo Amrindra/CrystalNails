@@ -1,4 +1,28 @@
 .navbar_container {
   display: flex;
-  color: red;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  /* background-color: gray; */
+  overflow: hidden;
+}
+
+.navbar_link_items {
+  display: flex;
+  padding: 0;
+}
+
+.nav_list_item {
+  padding: 10px 10px;
+}
+
+.navbar_icons {
+  display: flex;
+  padding: 0 20px;
+  gap: 10px;
+}
+
+.nav_icon {
+  font-size: 2rem;
 }

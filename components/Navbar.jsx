@@ -4,26 +4,25 @@ import { SiInstagram } from 'react-icons/si';
 
 const Navbar = () => {
   return (
-    <div>
-      <header className={styles.navbar_container}>
-        <div className="navbar-logo">
-          <h1>Crystal Nails</h1>
-        </div>
+    <header className={styles.navbar_container}>
+      <div className={styles.navbar_logo}>
+        <h1>Crystal Nails</h1>
+      </div>
 
-        <ul className="navbar-link-items">
-          <li className="nav-list-item">Home</li>
-          <li className="nav-list-item">Service</li>
-          <li className="nav-list-item">Contact us</li>
-          <li className="nav-list-item">Appointment</li>
-          <li className="nav-list-item">ABout us</li>
-        </ul>
-        <div className="navbar-icons">
-          <SiInstagram />
-          <FaFacebook />
-          <FaPhoneSquare />
-        </div>
-      </header>
-    </div>
+      <ul className={styles.navbar_link_items}>
+        <li className={styles.nav_list_item}>Home</li>
+        <li className={styles.nav_list_item}>Service</li>
+        <li className={styles.nav_list_item}>Contact us</li>
+        <li className={styles.nav_list_item}>Appointment</li>
+        <li className={styles.nav_list_item}>ABout us</li>
+      </ul>
+
+      <div className={styles.navbar_icons}>
+        <SiInstagram className={styles.nav_icon} />
+        <FaFacebook className={styles.nav_icon} />
+        <FaPhoneSquare className={styles.nav_icon} />
+      </div>
+    </header>
   );
 };
 export default Navbar;
