@@ -38,3 +38,9 @@
 .nav_icon {
   font-size: 1.5rem;
 }
+
+@media (max-width: 780px) {
+  .navbar_link_items {
+    display: none;
+  }
+}

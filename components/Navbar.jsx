@@ -12,7 +12,7 @@ const Navbar = () => {
       <ul className={styles.navbar_link_items}>
         <li className={styles.nav_list_item}>Home</li>
         <li className={styles.nav_list_item}>Service</li>
-        <li className={styles.nav_list_item}>Contact us</li>
+        <li className={styles.nav_list_item}>Contact</li>
         <li className={styles.nav_list_item}>Appointment</li>
         <li className={styles.nav_list_item}>ABout us</li>
       </ul>
