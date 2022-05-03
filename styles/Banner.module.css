@@ -1,9 +1,11 @@
 .banner_container {
+  /* max-height: 70vh; */
 }
 
 .banner_image {
-  width: 100%;
-  height: auto;
+  width: 100vw;
+  /* height: 100vh; */
+
   object-fit: cover;
 }
 
