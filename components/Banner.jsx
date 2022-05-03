@@ -3,7 +3,7 @@ import styles from '../styles/Banner.module.css';
 
 const Banner = () => {
   return (
-    <div className="styles banner_container">
+    <div className={styles.banner_container}>
       <div className={styles.banner_image}>
         {/* <Image
           src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v546batch3-mynt-34-badgewatercolor_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=89288ef4b47127f7f34a5998b50e4470"

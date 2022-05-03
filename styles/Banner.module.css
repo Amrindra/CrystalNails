@@ -1,0 +1,15 @@
+.banner_container {
+  height: 10vh;
+}
+
+.banner_image {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.banner_intro {
+  position: absolute;
+  top: 150px;
+}
