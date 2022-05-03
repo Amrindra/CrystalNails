@@ -1,10 +1,11 @@
 .banner_container {
-  height: 70vh;
+  /* height: 100vh; */
   position: relative;
 }
 
 .banner_image {
-  max-width: 100%;
+  width: 100%;
+  /* height: auto; */
   object-fit: cover;
 }
 

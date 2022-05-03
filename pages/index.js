@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Banner from '../components/Banner';
 import Navbar from '../components/Navbar';
+import Highlight from '../components/Highlight';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <main>
         <Navbar />
         <Banner />
+        <Highlight />
       </main>
     </div>
   );
