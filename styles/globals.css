@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&family=Caveat:wght@400;700&family=Kaushan+Script&family=Nanum+Gothic:wght@400;700&family=Nunito:ital,wght@0,200;1,200&family=Roboto+Mono:ital,wght@0,100;0,200;1,100&display=swap');
+/* 
+font-family: 'Cabin', sans-serif;
+font-family: 'Caveat', cursive;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+
 html,
 body {
   padding: 0;

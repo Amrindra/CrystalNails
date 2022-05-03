@@ -10,6 +10,11 @@
   top: 0; */
   position: fixed;
   top: 0;
+  padding: 0 50px;
+}
+
+.navbar_logo {
+  font-family: 'Cabin', sans-serif;
 }
 
 .navbar_link_items {
@@ -19,6 +24,9 @@
 
 .nav_list_item {
   padding: 10px 10px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .navbar_icons {

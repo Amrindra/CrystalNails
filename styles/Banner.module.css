@@ -1,15 +1,25 @@
 .banner_container {
-  height: 10vh;
+  /* height: 100vh; */
+  position: relative;
 }
 
 .banner_image {
-  height: 100vh;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
-  position: relative;
 }
 
 .banner_intro {
   position: absolute;
   top: 150px;
+  left: 150px;
+}
+
+.banner_title {
+  font-size: 6rem;
+  color: rgb(180, 64, 128);
+}
+
+.banner_sub_title {
+  font-size: 2.5rem;
 }
