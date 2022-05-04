@@ -79,6 +79,8 @@ export default function Home() {
           />
         </section>
 
+        <h3 className={styles.highlight_title}>Trending at our salon</h3>
+
         <section className={styles.highlight_section_wrapper}>
           <FaAngleLeft
             style={{ display: !isSlideTwo && 'none' }}
