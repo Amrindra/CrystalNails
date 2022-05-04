@@ -5,6 +5,7 @@ import Highlight from '../components/Highlight';
 import styles from '../styles/Home.module.css';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { useRef, useState } from 'react';
+import highlightData from '../data/highlightData';
 
 export default function Home() {
   const highlightRefOne = useRef(null);
@@ -62,14 +63,9 @@ export default function Home() {
           />
 
           <div className={styles.highlight_section} ref={highlightRefOne}>
-            <Highlight />
-            <Highlight />
-            <Highlight />
-            <Highlight />
-            <Highlight />
-            <Highlight />
-            <Highlight />
-            <Highlight />
+            {highlightData.map((data) => (
+              <Highlight imageScr={data.imageScr} />
+            ))}
           </div>
 
           <FaAngleRight
@@ -90,14 +86,15 @@ export default function Home() {
           />
 
           <div className={styles.highlight_section} ref={highlightRefTwo}>
-            <Highlight />
-            <Highlight />
-            <Highlight />
-            <Highlight />
-            <Highlight />
-            <Highlight />
-            <Highlight />
-            <Highlight />
+            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
+
+            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
+            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
+            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
+            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
+            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
+            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
+            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
           </div>
 
           <FaAngleRight
