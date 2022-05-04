@@ -30,14 +30,14 @@ export default function Home() {
   const handleSliderTwo = (direction) => {
     setIsSlideTwo(true);
 
-    if (handleSliderTwo.current) {
-      const { scrollLeft, clientWidth } = handleSliderTwo.current;
+    if (highlightRefTwo.current) {
+      const { scrollLeft, clientWidth } = highlightRefTwo.current;
 
       const scrollTo =
         direction === 'left'
           ? scrollLeft - clientWidth
           : scrollLeft + clientWidth;
-      handleSliderTwo.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
+      highlightRefTwo.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
     }
   };
 
