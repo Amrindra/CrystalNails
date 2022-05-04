@@ -3,6 +3,7 @@ import Banner from '../components/Banner';
 import Navbar from '../components/Navbar';
 import Highlight from '../components/Highlight';
 import Image from 'next/image';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
@@ -14,7 +15,17 @@ export default function Home() {
       <main>
         <Navbar />
         <Banner />
-        <Highlight />
+
+        <section className={styles.highlight_section}>
+          <Highlight />
+          <Highlight />
+          <Highlight />
+          <Highlight />
+          <Highlight />
+          <Highlight />
+          <Highlight />
+          <Highlight />
+        </section>
       </main>
     </div>
   );

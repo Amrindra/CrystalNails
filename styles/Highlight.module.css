@@ -1,0 +1,12 @@
+.highlight_container {
+  /* width: 400px;
+  height: 500px;
+  */
+}
+
+.highlight_image {
+  height: 500px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+}
