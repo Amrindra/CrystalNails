@@ -4,14 +4,16 @@ import Navbar from '../components/Navbar';
 import Highlight from '../components/Highlight';
 import styles from '../styles/Home.module.css';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 export default function Home() {
   const highlightRef = useRef(null);
 
-  // const []
+  const [isSlide, setIsSlide] = useState(false);
 
   const handleSlider = (direction) => {
+    setIsSlide(true);
+
     if (highlightRef.current) {
       const { scrollLeft, clientWidth } = highlightRef.current;
 
@@ -36,6 +38,7 @@ export default function Home() {
         <h3 className={styles.highlight_title}>Check our beautiful design</h3>
         <section className={styles.highlight_section_wrapper}>
           <FaAngleLeft
+            style={{ display: !isSlide && 'none' }}
             size={40}
             className={`${styles.highlight_arrow} ${styles.left}`}
             onClick={() => handleSlider('left')}
