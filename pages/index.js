@@ -7,21 +7,37 @@ import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { useRef, useState } from 'react';
 
 export default function Home() {
-  const highlightRef = useRef(null);
+  const highlightRefOne = useRef(null);
+  const highlightRefTwo = useRef(null);
 
-  const [isSlide, setIsSlide] = useState(false);
+  const [isSlideOne, setIsSlideOne] = useState(false);
+  const [isSlideTwo, setIsSlideTwo] = useState(false);
 
-  const handleSlider = (direction) => {
-    setIsSlide(true);
+  const handleSliderOne = (direction) => {
+    setIsSlideOne(true);
 
-    if (highlightRef.current) {
-      const { scrollLeft, clientWidth } = highlightRef.current;
+    if (highlightRefOne.current) {
+      const { scrollLeft, clientWidth } = highlightRefOne.current;
 
       const scrollTo =
         direction === 'left'
           ? scrollLeft - clientWidth
           : scrollLeft + clientWidth;
-      highlightRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
+      highlightRefOne.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
+    }
+  };
+
+  const handleSliderTwo = (direction) => {
+    setIsSlideTwo(true);
+
+    if (handleSliderTwo.current) {
+      const { scrollLeft, clientWidth } = handleSliderTwo.current;
+
+      const scrollTo =
+        direction === 'left'
+          ? scrollLeft - clientWidth
+          : scrollLeft + clientWidth;
+      handleSliderTwo.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
     }
   };
 
@@ -36,14 +52,16 @@ export default function Home() {
         <Banner />
 
         <h3 className={styles.highlight_title}>Check our beautiful design</h3>
+
         <section className={styles.highlight_section_wrapper}>
           <FaAngleLeft
-            style={{ display: !isSlide && 'none' }}
+            style={{ display: !isSlideOne && 'none' }}
             size={40}
             className={`${styles.highlight_arrow} ${styles.left}`}
-            onClick={() => handleSlider('left')}
+            onClick={() => handleSliderOne('left')}
           />
-          <div className={styles.highlight_section} ref={highlightRef}>
+
+          <div className={styles.highlight_section} ref={highlightRefOne}>
             <Highlight />
             <Highlight />
             <Highlight />
@@ -53,10 +71,37 @@ export default function Home() {
             <Highlight />
             <Highlight />
           </div>
+
           <FaAngleRight
             size={40}
             className={`${styles.highlight_arrow} ${styles.right}`}
-            onClick={() => handleSlider('right')}
+            onClick={() => handleSliderOne('right')}
+          />
+        </section>
+
+        <section className={styles.highlight_section_wrapper}>
+          <FaAngleLeft
+            style={{ display: !isSlideTwo && 'none' }}
+            size={40}
+            className={`${styles.highlight_arrow} ${styles.left}`}
+            onClick={() => handleSliderTwo('left')}
+          />
+
+          <div className={styles.highlight_section} ref={highlightRefTwo}>
+            <Highlight />
+            <Highlight />
+            <Highlight />
+            <Highlight />
+            <Highlight />
+            <Highlight />
+            <Highlight />
+            <Highlight />
+          </div>
+
+          <FaAngleRight
+            size={40}
+            className={`${styles.highlight_arrow} ${styles.right}`}
+            onClick={() => handleSliderTwo('right')}
           />
         </section>
       </main>
