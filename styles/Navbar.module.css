@@ -43,4 +43,8 @@
   .navbar_link_items {
     display: none;
   }
+
+  .navbar_logo {
+    font-size: 0.8rem;
+  }
 }

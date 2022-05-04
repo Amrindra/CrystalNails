@@ -45,4 +45,8 @@
   .highlight_section {
     padding-left: 40px;
   }
+
+  .highlight_title {
+    font-size: 2rem;
+  }
 }
