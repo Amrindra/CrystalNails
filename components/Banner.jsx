@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import styles from '../styles/Banner.module.css';
+import Image from "next/image";
+import styles from "../styles/Banner.module.css";
 
 const Banner = () => {
   return (
@@ -18,12 +18,10 @@ const Banner = () => {
       </div>
 
       <div className={styles.banner_intro}>
-        <h1 className={styles.banner_title}>
-          Welcome <br />
-          <span className={styles.banner_sub_title}>
-            To a Full Beauty & CO Experience
-          </span>
-        </h1>
+        <h1 className={styles.banner_title}>Welcome</h1>
+        <h3 className={styles.banner_sub_title}>
+          To a Full Beauty & CO Experience
+        </h3>
       </div>
     </div>
   );

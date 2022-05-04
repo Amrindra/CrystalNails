@@ -1,5 +1,5 @@
 .banner_container {
-  /* max-height: 70vh; */
+  overflow: hidden;
 }
 
 .banner_image {
