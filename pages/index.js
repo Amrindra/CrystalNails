@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Crystal Nails | Homepage</title>
       </Head>
 
       <main>
