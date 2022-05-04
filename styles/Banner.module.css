@@ -5,13 +5,12 @@
 .banner_image {
   width: 100vw;
   height: 70vh;
-
   object-fit: cover;
 }
 
 .banner_intro {
   position: absolute;
-  top: 150px;
+  top: 100px;
   left: 100px;
 }
 
@@ -22,4 +21,10 @@
 
 .banner_sub_title {
   font-size: 2.5vw;
+}
+
+@media (max-width: 980px) {
+  .banner_intro {
+    left: 50px;
+  }
 }

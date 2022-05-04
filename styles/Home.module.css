@@ -1,4 +1,12 @@
-.highlight_section{
+.highlight_section {
   padding-top: 1rem;
   display: flex;
+  overflow: scroll;
+  gap: 1rem;
+}
+
+.highlight_title {
+  font-size: 3rem;
+  text-align: center;
+  color: rgb(211, 55, 146);
 }

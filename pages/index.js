@@ -16,15 +16,18 @@ export default function Home() {
         <Navbar />
         <Banner />
 
-        <section className={styles.highlight_section}>
-          <Highlight />
-          <Highlight />
-          <Highlight />
-          <Highlight />
-          <Highlight />
-          <Highlight />
-          <Highlight />
-          <Highlight />
+        <section>
+          <h3 className={styles.highlight_title}>Check our beautiful design</h3>
+          <div className={styles.highlight_section}>
+            <Highlight />
+            <Highlight />
+            <Highlight />
+            <Highlight />
+            <Highlight />
+            <Highlight />
+            <Highlight />
+            <Highlight />
+          </div>
         </section>
       </main>
     </div>
