@@ -6,6 +6,8 @@
   width: 100vw;
   height: 70vh;
   object-fit: cover;
+  -webkit-mask-image: linear-gradient(to top, transparent 1%, black 15%);
+  mask-image: linear-gradient(to top, transparent 1%, black 15%);
 }
 
 .banner_intro {
