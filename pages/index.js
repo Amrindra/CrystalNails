@@ -12,8 +12,8 @@ export default function Home() {
   // const []
 
   const handleSlider = (direction) => {
-    if (sliderRef.current) {
-      const { scrollLeft, clientWidth } = sliderRef.current;
+    if (highlightRef.current) {
+      const { scrollLeft, clientWidth } = highlightRef.current;
 
       const scrollTo =
         direction === 'left'
@@ -38,6 +38,7 @@ export default function Home() {
           <FaAngleLeft
             size={40}
             className={`${styles.highlight_arrow} ${styles.left}`}
+            onClick={() => handleSlider('left')}
           />
           <div className={styles.highlight_section} ref={highlightRef}>
             <Highlight />
@@ -52,6 +53,7 @@ export default function Home() {
           <FaAngleRight
             size={40}
             className={`${styles.highlight_arrow} ${styles.right}`}
+            onClick={() => handleSlider('right')}
           />
         </section>
       </main>
