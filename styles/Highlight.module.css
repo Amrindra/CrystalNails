@@ -2,13 +2,21 @@
   /* width: 400px;
   height: 500px;
   */
+  padding: 10px;
+  object-fit: cover;
 }
 
 .highlight_image {
   height: 500px;
   width: 400px;
-  object-fit: cover;
   border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+.highlight_image:hover {
+  transform: scale(1.02);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 @media (max-width: 680px) {

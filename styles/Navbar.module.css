@@ -1,4 +1,5 @@
-.navbar_container {
+.navbar_container,
+.navbar_scrolled {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,8 +14,12 @@
   padding: 0 50px;
 }
 
+.navbar_scrolled {
+  background-color: white;
+}
+
 .navbar_logo {
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
 }
 
 .navbar_link_items {
@@ -24,7 +29,7 @@
 
 .nav_list_item {
   padding: 10px 10px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-weight: bold;
   font-size: 20px;
 }
