@@ -6,6 +6,7 @@ import styles from '../styles/Home.module.css';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { useRef, useState } from 'react';
 import highlightData from '../data/highlightData';
+import highlightTrending from '../data/highlightTrending';
 
 export default function Home() {
   const highlightRefOne = useRef(null);
@@ -63,8 +64,8 @@ export default function Home() {
           />
 
           <div className={styles.highlight_section} ref={highlightRefOne}>
-            {highlightData.map((data) => (
-              <Highlight imageScr={data.imageScr} />
+            {highlightData.map((data, index) => (
+              <Highlight key={index} imageScr={data.imageScr} />
             ))}
           </div>
 
@@ -86,15 +87,9 @@ export default function Home() {
           />
 
           <div className={styles.highlight_section} ref={highlightRefTwo}>
-            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
-
-            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
-            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
-            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
-            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
-            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
-            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
-            <Highlight imageScr="https://user-images.githubusercontent.com/70451928/166390465-fc137271-f827-4681-a6b4-85394b6936b5.jpg" />
+            {highlightTrending.map((data, index) => (
+              <Highlight key={index} imageScr={data.imageScr} />
+            ))}
           </div>
 
           <FaAngleRight
