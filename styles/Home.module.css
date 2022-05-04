@@ -40,3 +40,9 @@
 .highlight_arrow.right {
   right: 0;
 }
+
+@media (max-width: 680px) {
+  .highlight_section {
+    padding-left: 40px;
+  }
+}
