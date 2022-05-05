@@ -1,5 +1,12 @@
 import styles from "../styles/Footer.module.css";
-import { FaFacebook, FaPhoneSquare } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaPhoneSquare,
+  FaCalendarMinus,
+  FaClock,
+  FaLocationArrow,
+  FaPhoneAlt
+} from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 
 const Footer = () => {
@@ -11,7 +18,41 @@ const Footer = () => {
           <FaFacebook className={styles.footer_icon} />
           <FaPhoneSquare className={styles.footer_icon} />
         </div>
-        <h3>We are based in Lynn</h3>
+
+        <div className="footer_hour_wrapper">
+          <h3>HOURS</h3>
+          <ul className={styles.footer_hour}>
+            <li className={styles.hour_list_item}>
+              <span>
+                <FaCalendarMinus />
+              </span>
+              {"  "}
+              MONDAY - SATURDAY
+            </li>
+            <li className={styles.hour_list_item}>
+              <span>
+                <FaClock />
+              </span>{" "}
+              10AM - 7PM
+            </li>
+
+            <li className={styles.hour_list_item}>
+              {" "}
+              <span>
+                <FaLocationArrow />
+              </span>{" "}
+              30 Boston St #5, Lynn, MA 01904
+            </li>
+
+            <li className={styles.hour_list_item}>
+              {" "}
+              <span>
+                <FaPhoneAlt />
+              </span>{" "}
+              (781) 592-0992
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div className={styles.footer_right}>

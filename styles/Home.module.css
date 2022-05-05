@@ -8,6 +8,7 @@
 
 .slides {
   position: relative;
+  overflow: hidden;
 }
 
 .highlight_section_wrapper {

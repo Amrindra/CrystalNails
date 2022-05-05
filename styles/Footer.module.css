@@ -3,6 +3,8 @@
   display: flex;
   background-color: var(--header-footer-bg);
   color: var(--header-footer-color);
+  margin-top: 50px;
+  overflow: hidden;
 }
 
 .footer_left {
@@ -20,4 +22,12 @@
 
 .footer_right {
   flex: 1;
+}
+
+.footer_hour {
+  padding-top: 10px;
+}
+
+.hour_list_item {
+  padding: 5px 0;
 }
