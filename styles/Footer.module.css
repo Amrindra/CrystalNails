@@ -1,0 +1,23 @@
+.footer_container {
+  height: 50vh;
+  display: flex;
+  background-color: var(--header-footer-bg);
+  color: var(--header-footer-color);
+}
+
+.footer_left {
+  flex: 1;
+}
+
+.footer_icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  font-size: 2rem;
+  gap: 30px;
+}
+
+.footer_right {
+  flex: 1;
+}

@@ -33,7 +33,8 @@
   font-size: 3rem;
   text-align: center;
   color: rgb(211, 55, 146);
-  padding: 60px 0;
+  padding: 60px;
+  font-family: "Kaushan Script", cursive;
 }
 
 .highlight_arrow.left,

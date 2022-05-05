@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import highlightData from "../data/highlightData";
 import highlightTrending from "../data/highlightTrending";
 import bannerImageData from "../data/bannerImageData";
+import Footer from "../components/Footer";
 
 const len = bannerImageData.length - 1;
 // console.log(len);
@@ -125,6 +126,8 @@ export default function Home() {
           />
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 }

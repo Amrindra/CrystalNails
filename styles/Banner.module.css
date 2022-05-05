@@ -1,12 +1,12 @@
 .banner_container {
   overflow: hidden;
-  height: 65vh;
+  height: 95vh;
 }
 
 .banner_image {
   position: absolute;
   width: 100vw;
-  height: 70vh;
+  height: 90vh;
   object-fit: cover;
   z-index: -10;
   top: 0;

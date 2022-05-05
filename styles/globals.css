@@ -6,6 +6,12 @@ font-family: 'Kaushan Script', cursive;
 font-family: 'Nanum Gothic', sans-serif;
 font-family: 'Nunito', sans-serif;
 font-family: 'Roboto Mono', monospace; */
+
+:root {
+  --header-footer-bg: rgb(27, 25, 25);
+  --header-footer-color: rgb(255, 249, 249);
+}
+
 * {
   box-sizing: border-box;
   list-style: none;

@@ -15,8 +15,8 @@
 }
 
 .navbar_scrolled {
-  background-color: black;
-  color: white;
+  background-color: var(--header-footer-bg);
+  color: var(--header-footer-color);
 }
 
 .navbar_logo {
