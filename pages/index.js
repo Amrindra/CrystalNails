@@ -4,10 +4,13 @@ import Navbar from "../components/Navbar";
 import Highlight from "../components/Highlight";
 import styles from "../styles/Home.module.css";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import highlightData from "../data/highlightData";
 import highlightTrending from "../data/highlightTrending";
 import bannerImageData from "../data/bannerImageData";
+
+const len = bannerImageData.length - 1;
+// console.log(len);
 
 export default function Home() {
   const highlightRefOne = useRef(null);
@@ -15,6 +18,16 @@ export default function Home() {
 
   const [isSlideOne, setIsSlideOne] = useState(false);
   const [isSlideTwo, setIsSlideTwo] = useState(false);
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  //This inverval useEffect hook is used for banner to show images ever 6s
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [activeIndex]);
 
   const handleSliderOne = (direction) => {
     setIsSlideOne(true);
@@ -55,11 +68,18 @@ export default function Home() {
       <main>
         <section>
           {bannerImageData.map((data, index) => (
-            <Banner key={index} bannerImage={data.urls} />
+            <div
+              key={index}
+              className={`${
+                index === activeIndex ? styles.slides : styles.inactive
+              } ${styles.banner_section}`}
+            >
+              <Banner key={index} bannerImage={data.urls} />
+            </div>
           ))}
         </section>
 
-        {/* <h3 className={styles.highlight_title}>Check our beautiful design</h3>
+        <h3 className={styles.highlight_title}>Check our beautiful design</h3>
 
         <section className={styles.highlight_section_wrapper}>
           <FaAngleLeft
@@ -103,7 +123,7 @@ export default function Home() {
             className={`${styles.highlight_arrow} ${styles.right}`}
             onClick={() => handleSliderTwo("right")}
           />
-        </section> */}
+        </section>
       </main>
     </div>
   );

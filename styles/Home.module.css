@@ -2,16 +2,12 @@
   position: relative;
 }
 
-.banner_section {
-  position: absolute;
+.inactive {
+  display: none;
 }
 
-.banner_active {
-  /* display: inline-block; */
-}
-
-.banner_inactive {
-  /* display: none; */
+.slides {
+  position: relative;
 }
 
 .highlight_section_wrapper {
