@@ -1,4 +1,4 @@
-import styles from '../styles/Highlight.module.css';
+import styles from "../styles/Highlight.module.css";
 
 const Highlight = ({ imageScr }) => {
   return (

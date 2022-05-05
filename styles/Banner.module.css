@@ -1,19 +1,28 @@
 .banner_container {
   overflow: hidden;
+  height: 65vh;
 }
 
+/* flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12 */
+
 .banner_image {
+  position: absolute;
   width: 100vw;
   height: 70vh;
+  object-fit: cover;
+  z-index: -10;
+
   object-fit: cover;
   -webkit-mask-image: linear-gradient(to top, transparent 1%, black 15%);
   mask-image: linear-gradient(to top, transparent 1%, black 15%);
 }
 
 .banner_intro {
-  position: absolute;
+  margin-top: 150px;
+  margin-left: 70px;
+  /* position: absolute;
   top: 150px;
-  left: 100px;
+  left: 100px; */
 }
 
 .banner_title {

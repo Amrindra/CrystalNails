@@ -1,12 +1,13 @@
-import Head from 'next/head';
-import Banner from '../components/Banner';
-import Navbar from '../components/Navbar';
-import Highlight from '../components/Highlight';
-import styles from '../styles/Home.module.css';
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
-import { useRef, useState } from 'react';
-import highlightData from '../data/highlightData';
-import highlightTrending from '../data/highlightTrending';
+import Head from "next/head";
+import Banner from "../components/Banner";
+import Navbar from "../components/Navbar";
+import Highlight from "../components/Highlight";
+import styles from "../styles/Home.module.css";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { useRef, useState } from "react";
+import highlightData from "../data/highlightData";
+import highlightTrending from "../data/highlightTrending";
+import bannerImageData from "../data/bannerImageData";
 
 export default function Home() {
   const highlightRefOne = useRef(null);
@@ -22,10 +23,10 @@ export default function Home() {
       const { scrollLeft, clientWidth } = highlightRefOne.current;
 
       const scrollTo =
-        direction === 'left'
+        direction === "left"
           ? scrollLeft - clientWidth
           : scrollLeft + clientWidth;
-      highlightRefOne.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
+      highlightRefOne.current.scrollTo({ left: scrollTo, behavior: "smooth" });
     }
   };
 
@@ -36,31 +37,36 @@ export default function Home() {
       const { scrollLeft, clientWidth } = highlightRefTwo.current;
 
       const scrollTo =
-        direction === 'left'
+        direction === "left"
           ? scrollLeft - clientWidth
           : scrollLeft + clientWidth;
-      highlightRefTwo.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
+      highlightRefTwo.current.scrollTo({ left: scrollTo, behavior: "smooth" });
     }
   };
 
   return (
-    <div>
+    <div className={styles.homepage_container}>
       <Head>
         <title>Crystal Nails | Homepage</title>
       </Head>
 
-      <main>
-        <Navbar />
-        <Banner />
+      <Navbar />
 
-        <h3 className={styles.highlight_title}>Check our beautiful design</h3>
+      <main>
+        <section>
+          {bannerImageData.map((data, index) => (
+            <Banner key={index} bannerImage={data.urls} />
+          ))}
+        </section>
+
+        {/* <h3 className={styles.highlight_title}>Check our beautiful design</h3>
 
         <section className={styles.highlight_section_wrapper}>
           <FaAngleLeft
-            style={{ display: !isSlideOne && 'none' }}
+            style={{ display: !isSlideOne && "none" }}
             size={40}
             className={`${styles.highlight_arrow} ${styles.left}`}
-            onClick={() => handleSliderOne('left')}
+            onClick={() => handleSliderOne("left")}
           />
 
           <div className={styles.highlight_section} ref={highlightRefOne}>
@@ -72,7 +78,7 @@ export default function Home() {
           <FaAngleRight
             size={40}
             className={`${styles.highlight_arrow} ${styles.right}`}
-            onClick={() => handleSliderOne('right')}
+            onClick={() => handleSliderOne("right")}
           />
         </section>
 
@@ -80,10 +86,10 @@ export default function Home() {
 
         <section className={styles.highlight_section_wrapper}>
           <FaAngleLeft
-            style={{ display: !isSlideTwo && 'none' }}
+            style={{ display: !isSlideTwo && "none" }}
             size={40}
             className={`${styles.highlight_arrow} ${styles.left}`}
-            onClick={() => handleSliderTwo('left')}
+            onClick={() => handleSliderTwo("left")}
           />
 
           <div className={styles.highlight_section} ref={highlightRefTwo}>
@@ -95,9 +101,9 @@ export default function Home() {
           <FaAngleRight
             size={40}
             className={`${styles.highlight_arrow} ${styles.right}`}
-            onClick={() => handleSliderTwo('right')}
+            onClick={() => handleSliderTwo("right")}
           />
-        </section>
+        </section> */}
       </main>
     </div>
   );

@@ -1,3 +1,19 @@
+.homepage_container {
+  position: relative;
+}
+
+.banner_section {
+  position: absolute;
+}
+
+.banner_active {
+  /* display: inline-block; */
+}
+
+.banner_inactive {
+  /* display: none; */
+}
+
 .highlight_section_wrapper {
   position: relative;
   display: flex;
