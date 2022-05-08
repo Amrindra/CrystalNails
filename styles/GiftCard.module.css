@@ -1,0 +1,37 @@
+.giftcard_container {
+  height: 95vh;
+  display: flex;
+  padding-top: 100px;
+}
+
+.giftcard_left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.giftcard_left_bg {
+  height: 500px;
+  width: 400px;
+  border-radius: 10px;
+  background-color: #978686;
+  z-index: -1;
+}
+
+.giftcard_left_img {
+  height: 500px;
+  width: 400px;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-top: 20px;
+
+  position: absolute;
+}
+
+/* Right giftcard section */
+.giftcard_right {
+  flex: 1;
+  /* text-align: center; */
+  font-size: 2.5rem;
+}

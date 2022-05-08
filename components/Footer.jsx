@@ -19,9 +19,42 @@ const Footer = () => {
           <FaPhoneSquare className={styles.footer_icon} />
         </div>
 
-        <div className="footer_hour_wrapper">
-          <h3>HOURS</h3>
+        <div className={styles.footer_hour_wrapper}>
           <ul className={styles.footer_hour}>
+            <h3 className={styles.hour_title}>HOURS</h3>
+            <li className={styles.hour_list_item}>
+              <span>
+                <FaCalendarMinus />
+              </span>
+              {"  "}
+              MONDAY - SATURDAY
+            </li>
+            <li className={styles.hour_list_item}>
+              <span>
+                <FaClock />
+              </span>{" "}
+              10AM - 7PM
+            </li>
+
+            <li className={styles.hour_list_item}>
+              {" "}
+              <span>
+                <FaLocationArrow />
+              </span>{" "}
+              30 Boston St #5, Lynn, MA 01904
+            </li>
+
+            <li className={styles.hour_list_item}>
+              {" "}
+              <span>
+                <FaPhoneAlt />
+              </span>{" "}
+              (781) 592-0992
+            </li>
+          </ul>
+
+          <ul className={styles.footer_hour}>
+            <h3 className={styles.hour_title}>About Us</h3>
             <li className={styles.hour_list_item}>
               <span>
                 <FaCalendarMinus />

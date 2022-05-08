@@ -1,9 +1,8 @@
 .footer_container {
-  height: 50vh;
+  height: 60vh;
   display: flex;
   background-color: var(--header-footer-bg);
   color: var(--header-footer-color);
-  margin-top: 50px;
   overflow: hidden;
 }
 
@@ -20,14 +19,24 @@
   gap: 30px;
 }
 
-.footer_right {
-  flex: 1;
+.footer_hour_wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hour_title {
+  margin-bottom: 10px;
+  color: red;
 }
 
 .footer_hour {
-  padding-top: 10px;
+  padding-top: 50px;
 }
 
 .hour_list_item {
   padding: 5px 0;
+}
+
+.footer_right {
+  flex: 1;
 }

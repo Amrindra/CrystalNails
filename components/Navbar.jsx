@@ -39,7 +39,13 @@ const Navbar = () => {
       </ul>
 
       <div className={styles.navbar_icons}>
-        <SiInstagram className={styles.nav_icon} />
+        <a
+          href="https://www.instagram.com/crystalnailslynn/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <SiInstagram className={styles.nav_icon} />
+        </a>
         <FaFacebook className={styles.nav_icon} />
         <FaPhoneSquare className={styles.nav_icon} />
       </div>

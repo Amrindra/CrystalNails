@@ -9,8 +9,9 @@ import highlightData from "../data/highlightData";
 import highlightTrending from "../data/highlightTrending";
 import bannerImageData from "../data/bannerImageData";
 import Footer from "../components/Footer";
+import GiftCard from "../components/GiftCard";
 
-const len = bannerImageData.length - 1;
+export const len = bannerImageData.length - 1;
 // console.log(len);
 
 export default function Home() {
@@ -22,11 +23,11 @@ export default function Home() {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
-  //This inverval useEffect hook is used for banner to show images ever 6s
+  // This inverval useEffect hook is used for banner to show images ever 6s
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
-    }, 6000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [activeIndex]);
 
@@ -75,7 +76,7 @@ export default function Home() {
                 index === activeIndex ? styles.slides : styles.inactive
               } ${styles.banner_section}`}
             >
-              <Banner key={index} bannerImage={data.urls} />
+              <Banner key={index} index={index} bannerImage={data.urls} />
             </div>
           ))}
         </section>
@@ -124,6 +125,10 @@ export default function Home() {
             className={`${styles.highlight_arrow} ${styles.right}`}
             onClick={() => handleSliderTwo("right")}
           />
+        </section>
+
+        <section>
+          <GiftCard />
         </section>
       </main>
 
