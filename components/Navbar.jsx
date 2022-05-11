@@ -46,11 +46,18 @@ const Navbar = () => {
         >
           <SiInstagram className={styles.nav_icon} />
         </a>
-        <FaFacebook className={styles.nav_icon} />
+
+        <a
+          href="https://www.facebook.com/saoborey.ouk"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaFacebook className={styles.nav_icon} />
+        </a>
+
         <FaPhoneSquare className={styles.nav_icon} />
       </div>
     </header>
   );
 };
-
 export default Navbar;
