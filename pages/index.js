@@ -12,7 +12,6 @@ import Footer from "../components/Footer";
 import GiftCard from "../components/GiftCard";
 
 export const len = bannerImageData.length - 1;
-// console.log(len);
 
 export default function Home() {
   const highlightRefOne = useRef(null);
