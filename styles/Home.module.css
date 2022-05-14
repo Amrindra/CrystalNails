@@ -2,15 +2,6 @@
   position: relative;
 }
 
-.inactive {
-  display: none;
-}
-
-.slides {
-  position: relative;
-  overflow: hidden;
-}
-
 .highlight_section_wrapper {
   position: relative;
   display: flex;

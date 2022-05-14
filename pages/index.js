@@ -1,17 +1,14 @@
 import Head from "next/head";
-import Banner from "../components/Banner";
 import Navbar from "../components/Navbar";
+import Banner from "../components/banner/Banner";
 import Highlight from "../components/Highlight";
 import styles from "../styles/Home.module.css";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import highlightData from "../data/highlightData";
 import highlightTrending from "../data/highlightTrending";
-import bannerImageData from "../data/bannerImageData";
 import Footer from "../components/Footer";
 import GiftCard from "../components/GiftCard";
-
-export const len = bannerImageData.length - 1;
 
 export default function Home() {
   const highlightRefOne = useRef(null);
@@ -19,16 +16,6 @@ export default function Home() {
 
   const [isSlideOne, setIsSlideOne] = useState(false);
   const [isSlideTwo, setIsSlideTwo] = useState(false);
-
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  // This inverval useEffect hook is used for banner to show images ever 6s
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [activeIndex]);
 
   const handleSliderOne = (direction) => {
     setIsSlideOne(true);
@@ -68,16 +55,7 @@ export default function Home() {
 
       <main>
         <section>
-          {bannerImageData.map((data, index) => (
-            <div
-              key={index}
-              className={`${
-                index === activeIndex ? styles.slides : styles.inactive
-              } ${styles.banner_section}`}
-            >
-              <Banner key={index} index={index} bannerImage={data.urls} />
-            </div>
-          ))}
+          <Banner />
         </section>
 
         <h3 className={styles.highlight_title}>Check our beautiful design</h3>
@@ -126,9 +104,7 @@ export default function Home() {
           />
         </section>
 
-        <section>
-          <GiftCard />
-        </section>
+        <GiftCard />
       </main>
 
       <Footer />
