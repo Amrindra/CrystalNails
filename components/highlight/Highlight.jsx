@@ -1,9 +1,9 @@
-import HighlightBase from "./highlight/HighlightBase";
+import HighlightBase from "./HighlightBase";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { useRef, useState } from "react";
-import highlightData from "../data/highlightData";
-import styles from "../styles/Home.module.css";
-import highlightTrending from "../data/highlightTrending";
+import styles from "../../styles/Highlight.module.css";
+import highlightTrending from "../../data/highlightTrending";
+import highlightData from "../../data/highlightData";
 
 const Highlight = ({ imageScr }) => {
   const highlightRefOne = useRef(null);
