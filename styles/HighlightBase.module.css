@@ -1,0 +1,24 @@
+.highlight_container {
+  padding: 10px;
+  object-fit: cover;
+}
+
+.highlight_image {
+  height: 450px;
+  width: 350px;
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+.highlight_image:hover {
+  transform: scale(1.02);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+@media (max-width: 680px) {
+  .highlight_image {
+    height: 400px;
+    width: 300px;
+  }
+}
